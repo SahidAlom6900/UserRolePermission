@@ -1,0 +1,37 @@
+server:
+  port: 9191
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/user_servive?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        format-sql: true
+        dialect : org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      
+#  cache:
+#    type: redis
+#  redis:
+#    host: localhost
+#    port: 6379
+#    jedis:
+#      pool:
+#        max-active: 16
+#        max-idle: 8
+#        min-idle: 4   
+        
+#spring.jackson.serialization.write-dates-as-timestamps=false         
+        
+  jackson:
+    mapper:
+      default-view-inclusion: true
+    serialization:
+      write-date-keys-as-timestamps: false        
+
+
+          
